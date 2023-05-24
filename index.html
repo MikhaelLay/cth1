@@ -2,25 +2,115 @@
 <html>
     <head>
         <style>
+            body {background-color: rgb(255, 226, 192);}
             h1 { color:blue;}
+            p {color:indigo}
             table, th, td {Border: 1px solid black}
-            button { width:100%}
-        </style>
+            button {width:100%;
+                background-color: lightgrey; }
+            .buah {color:green}
+            #mangga {color:blueviolet}
+            a[target="_blank"] {background-color: yellow;}
+            .container {
+                display: flex;
+                justify-content: flex-start;}
+            .container div {
+                width: 100px;
+                padding: 10px;
+                text-align: center;
+                font-size: 14sp;
+                color: #ffeead;
+                border: 2px solid black;
+                background-color: green;
+                margin: 2px; 
+                border-radius: 5px;}
+            .wrapper {
+                display: grid;
+                grid-gap: 5px;
+                grid-template-columns: 100px 100px 100px;
+                background-color: #fff;
+                color: #444; }
+            .box {
+                background-color: #444;
+                color: #fff;
+                border-radius: 5px;
+                padding: 20px;
+                font-size: 150%; }  
+            .grid-container {
+                display: grid;
+                grid-gap: 2px;
+                grid-template-columns: 50px 50px 50px 50px;}
+            input { grid-column: 1/span 4;}
+            .redback {background-color: firebrick;
+            color: white; 
+            grid-column: 1/span 2;} 
+            .blueback {background-color: mediumblue;
+            color: white; } 
+            .yellowback {background-color: darkorange;
+            color: white; } 
+            .greenback {background-color: forestgreen;
+            color: white; } 
+            .blackback {background-color: black;
+            color: white; } 
+        
+       </style>
+        <link rel="stylesheet" href="index.css">
 
         <title>Test Contoh</title>
     </head>
         <body>
+            <nav class="container">
+                <div class="home">Home</div>
+                <div class="search">Search</div>
+                <div class="logout">Logout</div>
+            </nav>
+
+            <div class="wrapper">
+                <div class="box">A</div>
+                <div class="box">B</div>
+                <div class="box">C</div>
+                <div class="box">D</div>
+                <div class="box">E</div>
+                <div class="box">F</div>
+            </div>
+            <br>
+            <div class="grid-container"> 
+                <input type="text" name="display">
+                <button class="redback" >AC</button>
+                <button class="blueback">C</button>
+                <button class="yellowback">*</button>
+                <button>7</button>
+                <button>8</button>
+                <button>9</button>
+                <button class="yellowback">/</button>
+                <button>4</button>
+                <button>5</button>
+                <button>6</button>
+                <button class="yellowback">+</button>
+                <button>1</button>
+                <button>2</button>
+                <button>3</button>
+                <button class="yellowback">-</button>
+                <button class="blackback">+-</button>
+                <button>0</button>
+                <button class="blackback">.</button>
+                <button class="greenback">=</button>
+            </div> 
+
             <h3 style="color:red;">Hello World 425wsgb</h3>
             <h2 style="color:blue;">Hi!</h2>
                 <br>Ini Baris 1 
                 <br>Ini Baris 2
                 <!--commentar--> 
             <h1>Hello World 425wsgb</h1>
-
+        <br><a href="https://www.w3schools.com">w3schools.com</a>
+        <br><a href="https://www.wikipedia.org" target="_blank">wikipedia.com</a>
+        <br><a href="https://github.com/" target="_top">github.com</a>
+            <br>
             <ul type="Disc"> 
-                <li>Apel</li>
-                <li>Mangga</li>
-                <li>Pisang</li>
+                <li class="buah" id="apel">Apel</li>
+                <li class="buah" id="mangga">Mangga</li>
+                <li class="buah" id="pisang">Pisang</li>
                     <ol type="i">
                         <li>Pisang A</li>
                         <li>Pisang B</li>
@@ -167,29 +257,30 @@
                 <tr>
                     <th colspan="4"><input type="text" name="dispay"></th>
                 </tr><tr>
-                    <td colspan="2"><button>AC</button></td>
-                    <td><button>C</button></td>
-                    <td><button>*</button></td>
+                    <td colspan="2">
+                    <button class="redback">AC</button></td>
+                    <td><button class="blueback">C</button></td>
+                    <td><button class="yellowback">*</button></td>
                 </tr><tr>
                     <td><button>7</button></td>
                     <td><button>8</button></td>
                     <td><button>9</button></td>
-                    <td><button>/</button></td>
+                    <td><button class="yellowback">/</button></td>
                 </tr><tr>
                     <td><button>4</button></td>
                     <td><button>5</button></td>
                     <td><button>6</button></td>
-                    <td><button>+</button></td>
+                    <td><button class="yellowback">+</button></td>
                 </tr><tr>
                     <td><button>1</button></td>
                     <td><button>2</button></td>
                     <td><button>3</button></td>
-                    <td><button>-</button></td>
+                    <td><button class="yellowback">-</button></td>
                 </tr><tr>
-                    <td><button>+_</button></td>
+                    <td><button class="blackback">+-</button></td>
                     <td><button>0</button></td>
-                    <td><button>.</button></td>
-                    <td><button>=</button></td>
+                    <td><button class="blackback">.</button></td>
+                    <td><button class="greenback">=</button></td>
                 </tr>
             </table>
 
